@@ -17,15 +17,15 @@ body{
 
 header{
     position: fixed;
-    left: 10%;
-    top: 3%;
-    width: 80%;
+    z-index: 1;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 60px;
     border-radius: 20px;
+    padding: 0px 55px;
     background-color: #387ADF;
+    border-radius: 0 0 100px 100px;
 }
 .logo h1{
     color: white;
@@ -75,18 +75,20 @@ nav .logo-nav{
 }
 @media only screen and (max-width:780px){
     header{
-        padding: 0 20px;
+        padding: 0 100px;
+        position: fixed;
+        left: 0;
     }
     nav{
-        position: fixed;
-        left: -300px;
+        position: absolute;
+        left: -350px;
         top: 0;
-        z-index: 999;
+        z-index: 1;
         width: 180px;
-        height: 90vh;
+        height: 100vh;
         border-radius:0 50px 50px 0;
         background-color: #fefefe;
-        transition: 0.2s;
+        transition: 0.4s;
         box-shadow: 2px 0 20px 0 rgba(0, 0, 0,0.05);
     }
     .login{
@@ -127,33 +129,36 @@ nav .logo-nav{
 
 /* start landing style */
 .landing{
-    background-color: #EEE4B1;
+    background-color: #31363F;
     width: 100%;
     padding-bottom: 100px;
     height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    border-radius: 0 0 100px 100px;
+    border-radius: 0 0 50px 50px;
 }
 
 /* start home style */
 
 .home{
     background-image: url(pexels-roman-kirienko-10067091.jpg);
+    position: relative;
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 0 0 100px 100px;
+    border-radius: 0 0 50px 50px;
 }
 .home section{
+    position: absolute;
+    top: 25%;
+    left: 4%;
     width: 60%;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 140px 90px;
 }
 .home section h1{
     color: white;
@@ -208,7 +213,7 @@ nav .logo-nav{
     margin: 0 auto;
 }
 .services h1{
-    color: black;
+    color: white;
     width: fit-content;
     border-bottom: 1px solid black;
     font-size: 35px;
@@ -270,6 +275,7 @@ nav .logo-nav{
     gap: 15px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 .first-event , .second-event , .third-event , .fourth-event , .fifth-event , .six-event{
     display: flex;
@@ -295,16 +301,16 @@ nav .logo-nav{
 }
 /* start about us style */
 .about{
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap: 60px;
     align-items: center;
     justify-content: center;
-    margin-top: 40px ;
+    margin: 0 auto;
     background-color: #232D3F;
     padding: 40px 0;
-    border-radius: 100px 100px 0 0;
+    border-radius: 50px 50px 0 0;
 }
 .about-us{
     display: flex;
@@ -316,7 +322,7 @@ nav .logo-nav{
     width: 90%;
 }
 .about-us div img{
-    width: 400px;
+    width: 350px;
     border-radius: 30px 50px 50px 30px;
 }
 .about-us div h2{
@@ -377,7 +383,7 @@ nav .logo-nav{
 /* start contact us style */
 
 .contact{
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -449,6 +455,13 @@ nav .logo-nav{
     padding: 20px;
     width: 80%;
     border-radius: 20px;
+}
+.contact-us form button{
+    border: none;
+    background-color: red;
+    color: black;
+    padding: 5px 40px;
+    border-radius: 30px;
 }
 /* start footer */
 footer{
